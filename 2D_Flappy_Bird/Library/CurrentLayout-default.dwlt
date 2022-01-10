@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2482
     height: 1381
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -103,7 +103,7 @@ MonoBehaviour:
   m_MinSize: {x: 911, y: 442}
   m_MaxSize: {x: 22006, y: 10021}
   vertical: 0
-  controlID: 17
+  controlID: 37
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 442}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 18
+  controlID: 38
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -313,11 +313,11 @@ MonoBehaviour:
     - e00: 1
       e01: 0
       e02: 0
-      e03: 0
+      e03: 30
       e10: 0
       e11: 1
       e12: 0
-      e13: 0
+      e13: 104
       e20: 0
       e21: 0
       e22: 1
@@ -372,7 +372,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: cca2ffff6eaaffff18b0ffff9abaffff32faffff
+      m_ExpandedIDs: 3e6affff566affff1e6bffff266bffff1c6dffff306dffff867effffa888ffffde88fffff688ffffbe89ffffc689fffff689ffff14a1ffff2ca1ffff6ea1ffff86a1ffff8ca1ffff94a1ffffaaa1ffffbca1ffff74a2ffff76a6ffff82a6fffff4aaffff0cabffff12abffff1aabffff38abffff7aabffffecabffff04acffff0aacffff12acffff32acffffc0acffff1aaeffff34aefffffaaeffff02afffff0eb1ffffb0b4ffff40b8ffff12bbffff2ed6ffffe8d6ffff4adaffff6cdaffff0eddffff52ddffff40e5ffffa2e5ffff54e6ffffa6e6ffffe4e8ffff0ae9fffff8e9ffff32eaffff48eaffff86eaffff96ecffff9ceeffffaaeeffffb8eefffff2eeffff9af3ffffe8f3fffffcf3ffff62f4ffff84f4ffffd0f5fffffaf5ffffacf6fffff2f6ffff98f8ffff06f9ffffc6f9ffffdaf9fffff6f9ffff56faffff40fbfffff4ffffffb24400000a4500007e450000de45000050460000b64600002847000088470000fa470000b25b0000306100008c620000a8620000aa670000dc910000fc9100000093000060930000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -471,22 +471,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\s\Hansung_unity\2D_Flappy_Bird
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 3e560000
-    m_LastClickedID: 22078
-    m_ExpandedIDs: 000000003e56000000ca9a3b
+    m_SelectedIDs: ee420000
+    m_LastClickedID: 17134
+    m_ExpandedIDs: 00000000e442000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -514,7 +514,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 00000000e4420000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -541,8 +541,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: 06440000caf0ffffde470000cc4900004a560000
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: 06440000caf0ffffde470000cc4900004a56000084420000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -695,9 +695,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.65967953, y: 0.014228832, z: -0.055952143}
+    m_Target: {x: 0, y: 0, z: 0}
     speed: 2
-    m_Value: {x: 0.65967953, y: 0.014228832, z: -0.055952143}
+    m_Value: {x: 0, y: 0, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -748,9 +748,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 0.7726035
+    m_Target: 1.4720054
     speed: 2
-    m_Value: 0.7726035
+    m_Value: 1.4720054
   m_Ortho:
     m_Target: 1
     speed: 2

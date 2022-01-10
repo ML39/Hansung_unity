@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 887107411226323797}
   m_Layer: 0
   m_Name: Under_Pipe
-  m_TagString: Untagged
+  m_TagString: Pipe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 887107412376256366}
   m_Layer: 0
   m_Name: Upper_Pipe
-  m_TagString: Untagged
+  m_TagString: Pipe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

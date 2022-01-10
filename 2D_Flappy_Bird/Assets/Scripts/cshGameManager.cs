@@ -27,6 +27,12 @@ public class cshGameManager : MonoBehaviour
 
     public void Replay()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("GameScene");
+    }
+
+    public void Menu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("StartScene");
     }
 }

@@ -53,12 +53,15 @@
     <UnityVersion>2020.3.20f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\cshFlyBird.cs" />
     <Compile Include="Assets\Scripts\cshPipeMove.cs" />
-    <Compile Include="Assets\Scripts\cshPipeSpawner.cs" />
-    <Compile Include="Assets\Scripts\cshGameManager.cs" />
-    <Compile Include="Assets\Scripts\cshScore.cs" />
     <Compile Include="Assets\Scripts\cshAddScore.cs" />
+    <Compile Include="Assets\Scripts\cshScore.cs" />
+    <Compile Include="Assets\Scripts\cshFlyBird.cs" />
+    <Compile Include="Assets\Scripts\cshGameManager.cs" />
+    <Compile Include="Assets\Scripts\cshPipeSpawner.cs" />
+    <Compile Include="Assets\Scripts\cshStartLogo.cs" />
+    <Compile Include="Assets\Scripts\cshRandomTest.cs" />
+    <Compile Include="Assets\Scripts\cshButtonManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
