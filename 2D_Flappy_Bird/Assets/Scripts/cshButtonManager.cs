@@ -23,14 +23,14 @@ public class cshButtonManager : MonoBehaviour
     public void Super()
     {
         BirdAnimator.SetBool("Super", true);
-        bird.GetComponent<cshFlyBird>().super = true;
+        bird.GetComponent<cshBird>().super = true;
         bird.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
     }
 
     public void Normal()
     {
         BirdAnimator.SetBool("Super", false);
-        bird.GetComponent<cshFlyBird>().super = false;
+        bird.GetComponent<cshBird>().super = false;
         bird.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
     }
 }

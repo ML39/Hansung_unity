@@ -56,12 +56,15 @@
     <Compile Include="Assets\Scripts\cshPipeMove.cs" />
     <Compile Include="Assets\Scripts\cshAddScore.cs" />
     <Compile Include="Assets\Scripts\cshScore.cs" />
-    <Compile Include="Assets\Scripts\cshFlyBird.cs" />
+    <Compile Include="Assets\Scripts\cshButtonManager.cs" />
+    <Compile Include="Assets\Scripts\cshRandomTest.cs" />
     <Compile Include="Assets\Scripts\cshGameManager.cs" />
     <Compile Include="Assets\Scripts\cshPipeSpawner.cs" />
-    <Compile Include="Assets\Scripts\cshStartLogo.cs" />
-    <Compile Include="Assets\Scripts\cshRandomTest.cs" />
-    <Compile Include="Assets\Scripts\cshButtonManager.cs" />
+    <Compile Include="Assets\Scripts\cshCoinSpawner.cs" />
+    <Compile Include="Assets\Scripts\cshCoinMove.cs" />
+    <Compile Include="Assets\Scripts\cshStart.cs" />
+    <Compile Include="Assets\Scripts\cshBird.cs" />
+    <Compile Include="Assets\Scripts\cshReady.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

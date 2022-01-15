@@ -19,5 +19,6 @@ public class cshAddScore : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         cshScore.score += 1;
+        Destroy(gameObject);
     }
 }
