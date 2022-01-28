@@ -694,6 +694,7 @@ GameObject:
   - component: {fileID: 1140408284}
   - component: {fileID: 1140408286}
   - component: {fileID: 1140408285}
+  - component: {fileID: 1140408287}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Untagged
@@ -813,7 +814,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1140408280}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f01362754e106f04b8bffc74e8031c5f, type: 3}
   m_Name: 
@@ -837,6 +838,23 @@ CircleCollider2D:
   m_Offset: {x: -0.007566113, y: 0.0014186613}
   serializedVersion: 2
   m_Radius: 0.0531844
+--- !u!114 &1140408287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140408280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aa293da4ac307e4bb984487bf478c5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 1368554185}
+  velocity: 0.7
+  super: 0
+  exhale: 0
+  inhale: 0
 --- !u!1 &1167898522
 GameObject:
   m_ObjectHideFlags: 0
