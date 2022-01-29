@@ -24,11 +24,11 @@ public class cshBird_ble : MonoBehaviour
     {
         exhale = GameObject.Find("bleManager").GetComponent<StartingExample>().exhale;
         inhale = GameObject.Find("bleManager").GetComponent<StartingExample>().inhale;
-        if (exhale >= 1f)
+        if (exhale >= 0.5f)
         {
             rb.velocity = Vector2.up * velocity;
         }
-        else if (inhale >= 1f)
+        else if (inhale >= 0.5f)
         {
             rb.velocity = Vector2.down * velocity;
         }

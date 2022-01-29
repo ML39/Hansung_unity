@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class cshPipeSpawner : MonoBehaviour
 {
-    public float maxTime = 3;
+    public float maxTime = 5;
     private float timer = 0;
     public GameObject pipe;
     public float height;

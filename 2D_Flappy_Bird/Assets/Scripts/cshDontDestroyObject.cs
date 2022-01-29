@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class cshDontDestroyObject : MonoBehaviour
 {
+    public static cshDontDestroyObject Tmp;
+
     private void Awake()
-    { 
-        DontDestroyOnLoad(GameObject.Find("bleManager")); 
+    {
+        if (Tmp != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Tmp = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     // Start is called before the first frame update
