@@ -31,4 +31,8 @@ public class cshStart : MonoBehaviour
     {
         level = 2;
     }
+    public void HardGame()
+    {
+        level = 3;
+    }
 }

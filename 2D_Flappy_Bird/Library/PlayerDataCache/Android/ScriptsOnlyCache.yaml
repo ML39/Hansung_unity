@@ -42,13 +42,13 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
-    Unity.Timeline.Editor.dll:
-    - TimelineProjectSettings
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -104,19 +104,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2702}
     - Class: 114
-      Script: {instanceID: 2862}
+      Script: {instanceID: 2864}
     - Class: 114
-      Script: {instanceID: 3094}
+      Script: {instanceID: 3098}
     - Class: 114
-      Script: {instanceID: 3152}
+      Script: {instanceID: 3156}
     - Class: 114
-      Script: {instanceID: 3338}
+      Script: {instanceID: 3342}
     - Class: 114
-      Script: {instanceID: 3450}
+      Script: {instanceID: 3454}
     - Class: 114
-      Script: {instanceID: 4806}
+      Script: {instanceID: 4810}
     - Class: 114
-      Script: {instanceID: 5192}
+      Script: {instanceID: 5196}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -169,17 +169,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2702}
     - Class: 114
-      Script: {instanceID: 2862}
+      Script: {instanceID: 2864}
     - Class: 114
-      Script: {instanceID: 3094}
+      Script: {instanceID: 3098}
     - Class: 114
-      Script: {instanceID: 3152}
+      Script: {instanceID: 3156}
     - Class: 114
-      Script: {instanceID: 3338}
+      Script: {instanceID: 3342}
     - Class: 114
-      Script: {instanceID: 3450}
+      Script: {instanceID: 3454}
     - Class: 114
-      Script: {instanceID: 3466}
+      Script: {instanceID: 3470}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -244,23 +244,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2702}
     - Class: 114
-      Script: {instanceID: 2862}
+      Script: {instanceID: 2864}
     - Class: 114
-      Script: {instanceID: 3032}
+      Script: {instanceID: 3034}
     - Class: 114
-      Script: {instanceID: 3094}
+      Script: {instanceID: 3098}
     - Class: 114
-      Script: {instanceID: 3338}
+      Script: {instanceID: 3342}
     - Class: 114
-      Script: {instanceID: 3450}
+      Script: {instanceID: 3454}
     - Class: 114
-      Script: {instanceID: 4894}
+      Script: {instanceID: 4898}
     - Class: 114
-      Script: {instanceID: 5120}
+      Script: {instanceID: 5124}
     - Class: 114
-      Script: {instanceID: 5210}
+      Script: {instanceID: 5214}
     - Class: 114
-      Script: {instanceID: 5506}
+      Script: {instanceID: 5510}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -303,17 +303,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2702}
     - Class: 114
-      Script: {instanceID: 2862}
-    - Class: 114
-      Script: {instanceID: 3090}
+      Script: {instanceID: 2864}
     - Class: 114
       Script: {instanceID: 3094}
     - Class: 114
-      Script: {instanceID: 3338}
+      Script: {instanceID: 3098}
     - Class: 114
-      Script: {instanceID: 3450}
+      Script: {instanceID: 3342}
     - Class: 114
-      Script: {instanceID: 4226}
+      Script: {instanceID: 3454}
+    - Class: 114
+      Script: {instanceID: 4230}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -362,21 +362,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2702}
     - Class: 114
-      Script: {instanceID: 2862}
+      Script: {instanceID: 2720}
     - Class: 114
-      Script: {instanceID: 2912}
+      Script: {instanceID: 2864}
     - Class: 114
-      Script: {instanceID: 3090}
+      Script: {instanceID: 2914}
+    - Class: 114
+      Script: {instanceID: 3050}
     - Class: 114
       Script: {instanceID: 3094}
     - Class: 114
-      Script: {instanceID: 3338}
+      Script: {instanceID: 3098}
     - Class: 114
-      Script: {instanceID: 3450}
+      Script: {instanceID: 3342}
     - Class: 114
-      Script: {instanceID: 30680}
-    - Class: 114
-      Script: {instanceID: 34122}
+      Script: {instanceID: 3454}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -612,6 +612,12 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
+      Hash: c79a2098ac91d37899e22a8b7efdb954
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: cshBleButtonManager
+  - hash:
+      serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -652,6 +658,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: cshBird
+  - hash:
+      serializedVersion: 2
+      Hash: 81ec9c1a0c1e1c52728a62dac95c315d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: cshBleTextManager
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1044,7 +1056,7 @@ ScriptsOnlyBuild:
     className: iBeaconItemScript
   - hash:
       serializedVersion: 2
-      Hash: 8afb9aece1d64e1f00365b268f03a9bf
+      Hash: 066ae222605b6b3f7cf2d0972a5d669e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: cshGameManager
@@ -1126,18 +1138,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
-  - hash:
-      serializedVersion: 2
-      Hash: c79a2098ac91d37899e22a8b7efdb954
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: cshBleButtonManager
-  - hash:
-      serializedVersion: 2
-      Hash: 81ec9c1a0c1e1c52728a62dac95c315d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: cshBleTextManager
   platform: 13
   scenePathNames:
   - Assets/Scenes/CognitoTestScene.unity

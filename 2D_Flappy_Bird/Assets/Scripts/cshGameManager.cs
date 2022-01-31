@@ -7,8 +7,9 @@ public class cshGameManager : MonoBehaviour
 {
     public GameObject gameOverCanvas;
     public GameObject ScoreCanvas;
-    public GameObject PipeSpawner;
     public GameObject CoinSpawner;
+    public GameObject NormalPipeSpawner;
+    public GameObject HardPipeSpawner;
     public GameObject Bird;
     public GameObject Ready;
 
@@ -28,6 +29,9 @@ public class cshGameManager : MonoBehaviour
                 break;
             case 2:
                 Normal();
+                break;
+            case 3:
+                Hard();
                 break;
             default:
                 break;
@@ -64,6 +68,11 @@ public class cshGameManager : MonoBehaviour
 
     public void Normal()
     {
-        PipeSpawner.SetActive(true);
+        NormalPipeSpawner.SetActive(true);
+    }
+
+    public void Hard()
+    {
+        HardPipeSpawner.SetActive(true);
     }
 }
