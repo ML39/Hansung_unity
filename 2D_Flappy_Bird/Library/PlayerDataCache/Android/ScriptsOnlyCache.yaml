@@ -18,6 +18,7 @@ ScriptsOnlyBuild:
     - cshReady
     - cshScene2Scene
     - cshScore
+    - cshSound
     - cshStart
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -45,10 +46,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -110,13 +109,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3156}
     - Class: 114
-      Script: {instanceID: 3342}
+      Script: {instanceID: 3344}
     - Class: 114
-      Script: {instanceID: 3454}
+      Script: {instanceID: 3456}
     - Class: 114
-      Script: {instanceID: 4810}
+      Script: {instanceID: 4812}
     - Class: 114
-      Script: {instanceID: 5196}
+      Script: {instanceID: 5198}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -175,11 +174,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3156}
     - Class: 114
-      Script: {instanceID: 3342}
+      Script: {instanceID: 3344}
     - Class: 114
-      Script: {instanceID: 3454}
+      Script: {instanceID: 3456}
     - Class: 114
-      Script: {instanceID: 3470}
+      Script: {instanceID: 3472}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -221,6 +220,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -250,17 +253,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3098}
     - Class: 114
-      Script: {instanceID: 3342}
+      Script: {instanceID: 3242}
     - Class: 114
-      Script: {instanceID: 3454}
+      Script: {instanceID: 3344}
     - Class: 114
-      Script: {instanceID: 4898}
+      Script: {instanceID: 3456}
     - Class: 114
-      Script: {instanceID: 5124}
+      Script: {instanceID: 4900}
     - Class: 114
-      Script: {instanceID: 5214}
+      Script: {instanceID: 5126}
     - Class: 114
-      Script: {instanceID: 5510}
+      Script: {instanceID: 5216}
+    - Class: 114
+      Script: {instanceID: 5512}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -309,11 +314,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3098}
     - Class: 114
-      Script: {instanceID: 3342}
+      Script: {instanceID: 3344}
     - Class: 114
-      Script: {instanceID: 3454}
+      Script: {instanceID: 3456}
     - Class: 114
-      Script: {instanceID: 4230}
+      Script: {instanceID: 4232}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -374,9 +379,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3098}
     - Class: 114
-      Script: {instanceID: 3342}
+      Script: {instanceID: 3344}
     - Class: 114
-      Script: {instanceID: 3454}
+      Script: {instanceID: 3456}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -504,7 +509,7 @@ ScriptsOnlyBuild:
     className: BluetoothDeviceScript
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: e3180796bdc023b4861c31a01a103ef4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: cshAddScore
@@ -712,6 +717,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: TestResultRendererCallback
+  - hash:
+      serializedVersion: 2
+      Hash: 4fb7c028d2a1f675acd5e1c831a4ad1a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: cshSound
   - hash:
       serializedVersion: 2
       Hash: 748dd2a2a28da4e618912da5ac45684b
@@ -1056,7 +1067,7 @@ ScriptsOnlyBuild:
     className: iBeaconItemScript
   - hash:
       serializedVersion: 2
-      Hash: 066ae222605b6b3f7cf2d0972a5d669e
+      Hash: bf9775fe98ea71ef9fbc54a881288b29
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: cshGameManager
@@ -1145,4 +1156,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/ble_test_scence1.unity
   - Assets/Scenes/StartScene.unity
   - Assets/Scenes/GameScene.unity
-  playerPath: E:/s/2DFlappyBird_ver0.0.3.apk
+  playerPath: E:/s/2DFlappyBird_ver0.0.4.apk

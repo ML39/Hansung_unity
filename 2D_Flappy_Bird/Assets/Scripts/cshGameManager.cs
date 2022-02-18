@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class cshGameManager : MonoBehaviour
 {
+    public GameObject PauseCanvas;
     public GameObject gameOverCanvas;
     public GameObject ScoreCanvas;
     public GameObject CoinSpawner;
@@ -44,11 +45,23 @@ public class cshGameManager : MonoBehaviour
         
     }
 
+    public void Pause()
+    {
+        PauseCanvas.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void Continue()
+    {
+        PauseCanvas.SetActive(false);
+        Time.timeScale = 1;
+    }
     public void GameOver()
     {
         gameOverCanvas.SetActive(true);
         Time.timeScale = 0;
     }
+
 
     public void Replay()
     {
@@ -64,6 +77,8 @@ public class cshGameManager : MonoBehaviour
     public void Easy()
     {
         CoinSpawner.SetActive(true);
+        GameObject.Find("Bird").GetComponent<cshBird>().super = true;
+        GameObject.Find("Bird").GetComponent<cshBird_ble>().super = true;
     }
 
     public void Normal()

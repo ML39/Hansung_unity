@@ -29,6 +29,7 @@ public class cshBird : MonoBehaviour
     {
         if (super)
             return;
-        gameManager.GameOver();
+        else
+            gameManager.GameOver();
     }
 }

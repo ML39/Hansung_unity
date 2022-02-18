@@ -133,6 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743a6469f5d209b48bdfc7c80d28b0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PointEffect: {fileID: 1474739016446479281, guid: d8426659611aaea4d977544e469ce9cd, type: 3}
 --- !u!114 &1033471287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,4 +146,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02a75f5e2730d6f4a8a9526b52fc33a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 0.2

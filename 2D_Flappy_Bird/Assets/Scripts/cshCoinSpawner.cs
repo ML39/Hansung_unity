@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class cshCoinSpawner : MonoBehaviour
 {
-    public float maxTime = 2;
+    public float maxTime = 6;
     private float timer = 0;
     public GameObject coin;
     public float height;
@@ -22,7 +22,7 @@ public class cshCoinSpawner : MonoBehaviour
         {
             GameObject newcoin = Instantiate(coin);
             newcoin.transform.position = transform.position + new Vector3(0, Random.Range(-height, height), 0);
-            Destroy(newcoin, 10);
+            Destroy(newcoin, 20);
             timer = 0;
         }
 

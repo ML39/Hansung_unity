@@ -5,7 +5,7 @@ using UnityEngine;
 public class cshBird_ble : MonoBehaviour
 {
     public cshGameManager gameManager;
-    public float velocity = 0.7f;
+    public float velocity = 0.3f;
     private Rigidbody2D rb;
     public bool super;
 
@@ -24,11 +24,11 @@ public class cshBird_ble : MonoBehaviour
     {
         exhale = GameObject.Find("bleManager").GetComponent<StartingExample>().exhale;
         inhale = GameObject.Find("bleManager").GetComponent<StartingExample>().inhale;
-        if (exhale >= 0.5f)
+        if (exhale >= 0.3f)
         {
             rb.velocity = Vector2.up * velocity;
         }
-        else if (inhale >= 0.5f)
+        else if (inhale >= 0.3f)
         {
             rb.velocity = Vector2.down * velocity;
         }
