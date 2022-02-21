@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
+using System;
 
 public class cshGameManager : MonoBehaviour
 {
@@ -15,6 +17,25 @@ public class cshGameManager : MonoBehaviour
     public GameObject Ready;
 
     public int level;
+
+    private UnityAction StartGameListener;
+    private UnityAction GameOverListener;
+
+    public float GameStartTime;
+    public float GameOverTime;
+    public float GameTime;
+
+    private void Awake()
+    {
+        StartGameListener = new UnityAction(GameStartEvent);
+        GameOverListener = new UnityAction(GameOverEvent);
+    }
+
+    private void OnEnable()
+    {
+        cshEventManager.StartListening("StartGame", StartGameListener);
+        cshEventManager.StartListening("GameOver", GameOverListener);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -37,12 +58,31 @@ public class cshGameManager : MonoBehaviour
             default:
                 break;
         }
+
+        cshEventManager.TriggerEvent("StartGame");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    public void GameStartEvent()
+    {
+        GameStartTime = Time.time;
+        Debug.Log("StartGame" + ", Time : " + DateTime.Now);
+    }
+
+    public void GameOverEvent() 
+    {
+        GameOverTime = Time.time;
+        GameTime = GameOverTime - GameStartTime;
+        cshEventManager.GameTime = (int)GameTime;
+        cshEventManager.GameScore = cshScore.score;
+        cshEventManager.GameDateTime = DateTime.Now.ToString("G");
+
+        Debug.Log("GameOver, Score:"+ cshScore.score + ", Time : " + DateTime.Now);
     }
 
     public void Pause()
@@ -58,6 +98,7 @@ public class cshGameManager : MonoBehaviour
     }
     public void GameOver()
     {
+        cshEventManager.TriggerEvent("GameOver");
         gameOverCanvas.SetActive(true);
         Time.timeScale = 0;
     }
@@ -70,6 +111,7 @@ public class cshGameManager : MonoBehaviour
 
     public void Menu()
     {
+        cshEventManager.TriggerEvent("GameOver");
         Time.timeScale = 1;
         SceneManager.LoadScene("StartScene");
     }

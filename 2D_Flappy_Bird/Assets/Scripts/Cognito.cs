@@ -9,6 +9,7 @@ using System;
 using System.Threading.Tasks;
 using Amazon.Extensions.CognitoAuthentication;
 using Newtonsoft.Json;
+using UnityEngine.Events;
 
 
 
@@ -36,6 +37,17 @@ public class Cognito : MonoBehaviour
     // static Amazon.RegionEndpoint Region = Amazon.RegionEndpoint.APNortheast2; //insert region user pool was created in, if it is different than US EAST 1
     bool signInSuccessful;
 
+    private UnityAction LogINListener;
+
+    private void Awake()
+    {
+        LogINListener = new UnityAction(LogINEvent);
+    }
+
+    private void OnEnable()
+    {
+        cshEventManager.StartListening("LogIN", LogINListener);
+    }
 
     void Start()
     {
@@ -53,11 +65,11 @@ public class Cognito : MonoBehaviour
     {
         if (signInSuccessful)
         {
+            cshEventManager.TriggerEvent("LogIN");
             animator.SetBool("activity", false);
            // SceneManager.LoadScene(1);
             SceneManager.LoadScene("ble_test_scence1");
         }
-           
     }
 
     public void on_signup_click()
@@ -159,5 +171,11 @@ public class Cognito : MonoBehaviour
             StatusText.text = "Signin error : " + e;
             return;
         }
+    }
+
+    public void LogINEvent()
+    {
+        cshEventManager.Email = UsernameField.text;
+        Debug.Log("LogIN" + ", Time : " + DateTime.Now);
     }
 }

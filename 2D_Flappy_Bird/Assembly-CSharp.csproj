@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\cshBird.cs" />
     <Compile Include="Assets\Scripts\cshBleTextManager.cs" />
     <Compile Include="Assets\Scripts\cshScene2Scene.cs" />
+    <Compile Include="Assets\Scripts\cshSound.cs" />
     <Compile Include="Assets\Scripts\CognitoForgotPassword.cs" />
     <Compile Include="Assets\Scripts\cshButtonManager.cs" />
     <Compile Include="Assets\Shatalmic\Example\MultipleLevels\Level2Script.cs" />
@@ -91,8 +92,9 @@
     <Compile Include="Assets\Shatalmic\Example\iBeaconExample\iBeaconExampleScript.cs" />
     <Compile Include="Assets\Scripts\cshPipeSpawner.cs" />
     <Compile Include="Assets\Scripts\Observer.cs" />
+    <Compile Include="Assets\Scripts\EventManager.cs" />
     <Compile Include="Assets\Scripts\LightFlicker.cs" />
-    <Compile Include="Assets\Scripts\cshSound.cs" />
+    <Compile Include="Assets\Scripts\cshEventManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -111,7 +113,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-    <None Include="Assets\2DBirds_Pack3\Documentation 1\Documentation.txt" />
+    <None Include="Assets\AssetsStore\2DBirds_Pack3\Documentation 1\Documentation.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
