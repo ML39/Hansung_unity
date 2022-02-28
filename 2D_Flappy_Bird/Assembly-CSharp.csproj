@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -47,54 +47,46 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.12</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.14</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2020.3.20f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Cognito.cs" />
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Scripts\LoginScene\Cognito.cs" />
     <Compile Include="Assets\Shatalmic\Example\StartingExample\StartingExample.cs" />
-    <Compile Include="Assets\Scripts\cshPipeMove.cs" />
-    <Compile Include="Assets\Scripts\cshAddScore.cs" />
-    <Compile Include="Assets\Scripts\cshBird_ble.cs" />
+    <Compile Include="Assets\Scripts\GameScene\cshPipeMove.cs" />
+    <Compile Include="Assets\Scripts\GameScene\cshAddScore.cs" />
+    <Compile Include="Assets\Scripts\GameScene\cshBird_ble.cs" />
     <Compile Include="Assets\Shatalmic\Example\MultipleLevels\FoundDeviceListScript.cs" />
     <Compile Include="Assets\Shatalmic\Example\ScannerTest\ScannerTestScript.cs" />
-    <Compile Include="Assets\Scripts\cshDontDestroyObject.cs" />
-    <Compile Include="Assets\Scripts\PlayMovement2.cs" />
-    <Compile Include="Assets\Scripts\cshCoinMove.cs" />
-    <Compile Include="Assets\Scripts\cshScore.cs" />
+    <Compile Include="Assets\Scripts\BleScene\cshDontDestroyObject.cs" />
+    <Compile Include="Assets\Scripts\GameScene\cshCoinMove.cs" />
+    <Compile Include="Assets\Scripts\GameScene\cshScore.cs" />
     <Compile Include="Assets\Shatalmic\Example\SensorBugTest\SensorBugTest.cs" />
-    <Compile Include="Assets\Scripts\GameEnding.cs" />
-    <Compile Include="Assets\Scripts\cshBleButtonManager.cs" />
+    <Compile Include="Assets\Scripts\BleScene\cshBleButtonManager.cs" />
     <Compile Include="Assets\Shatalmic\Example\MultipleLevels\DeviceObject.cs" />
-    <Compile Include="Assets\Scripts\cshBird.cs" />
-    <Compile Include="Assets\Scripts\cshBleTextManager.cs" />
+    <Compile Include="Assets\Scripts\GameScene\cshBird.cs" />
+    <Compile Include="Assets\Scripts\BleScene\cshBleTextManager.cs" />
     <Compile Include="Assets\Scripts\cshScene2Scene.cs" />
-    <Compile Include="Assets\Scripts\cshSound.cs" />
-    <Compile Include="Assets\Scripts\CognitoForgotPassword.cs" />
-    <Compile Include="Assets\Scripts\cshButtonManager.cs" />
+    <Compile Include="Assets\cshTMP.cs" />
+    <Compile Include="Assets\Scripts\GameScene\cshSound.cs" />
+    <Compile Include="Assets\Scripts\LoginScene\CognitoForgotPassword.cs" />
+    <Compile Include="Assets\Scripts\BleScene\cshButtonManager.cs" />
     <Compile Include="Assets\Shatalmic\Example\MultipleLevels\Level2Script.cs" />
     <Compile Include="Assets\Shatalmic\Example\ArduinoHM10Test\ArduinoHM10Test.cs" />
-    <Compile Include="Assets\Scripts\LoginSuccess.cs" />
-    <Compile Include="Assets\Scripts\cshStart.cs" />
-    <Compile Include="Assets\Scripts\AndroidLib.cs" />
-    <Compile Include="Assets\Scripts\cshRandomTest.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\LoginScene\cshEventManager.cs" />
+    <Compile Include="Assets\Scripts\GameStartScene\cshStart.cs" />
     <Compile Include="Assets\Shatalmic\Example\ScannerTest\ScannedItemScript.cs" />
-    <Compile Include="Assets\Scripts\WaypointPatrol.cs" />
     <Compile Include="Assets\Shatalmic\Example\MultipleLevels\Level1Script.cs" />
-    <Compile Include="Assets\Scripts\cshReady.cs" />
-    <Compile Include="Assets\Scripts\Outliner.cs" />
     <Compile Include="Assets\Shatalmic\Example\iBeaconExample\iBeaconItemScript.cs" />
-    <Compile Include="Assets\Scripts\cshGameManager.cs" />
-    <Compile Include="Assets\Scripts\cshCoinSpawner.cs" />
+    <Compile Include="Assets\Scripts\GameScene\cshGameManager.cs" />
+    <Compile Include="Assets\Scripts\GameScene\cshCoinSpawner.cs" />
     <Compile Include="Assets\Shatalmic\Example\iBeaconExample\iBeaconExampleScript.cs" />
-    <Compile Include="Assets\Scripts\cshPipeSpawner.cs" />
-    <Compile Include="Assets\Scripts\Observer.cs" />
-    <Compile Include="Assets\Scripts\EventManager.cs" />
-    <Compile Include="Assets\Scripts\LightFlicker.cs" />
-    <Compile Include="Assets\Scripts\cshEventManager.cs" />
+    <Compile Include="Assets\Scripts\GameScene\cshPipeSpawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

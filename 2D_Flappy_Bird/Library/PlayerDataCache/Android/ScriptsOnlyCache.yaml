@@ -16,22 +16,17 @@ ScriptsOnlyBuild:
     - cshGameManager
     - cshPipeMove
     - cshPipeSpawner
-    - cshReady
     - cshScene2Scene
     - cshScore
     - cshSound
     - cshStart
+    - cshTMP
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
-    Unity.2D.IK.Runtime.dll:
-    - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -92,15 +87,15 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1498}
+      Script: {instanceID: 1500}
     - Class: 114
-      Script: {instanceID: 1586}
+      Script: {instanceID: 1588}
     - Class: 114
-      Script: {instanceID: 1866}
+      Script: {instanceID: 1868}
     - Class: 114
-      Script: {instanceID: 2258}
+      Script: {instanceID: 2260}
     - Class: 114
-      Script: {instanceID: 2266}
+      Script: {instanceID: 2268}
     - Class: 114
       Script: {instanceID: 2702}
     - Class: 114
@@ -110,15 +105,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3156}
     - Class: 114
-      Script: {instanceID: 3344}
+      Script: {instanceID: 3346}
     - Class: 114
-      Script: {instanceID: 3456}
+      Script: {instanceID: 3458}
     - Class: 114
-      Script: {instanceID: 4224}
+      Script: {instanceID: 4222}
     - Class: 114
-      Script: {instanceID: 4814}
+      Script: {instanceID: 4804}
     - Class: 114
-      Script: {instanceID: 5200}
+      Script: {instanceID: 5188}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -165,9 +160,9 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1498}
+      Script: {instanceID: 1500}
     - Class: 114
-      Script: {instanceID: 2266}
+      Script: {instanceID: 2268}
     - Class: 114
       Script: {instanceID: 2702}
     - Class: 114
@@ -177,11 +172,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3156}
     - Class: 114
-      Script: {instanceID: 3344}
+      Script: {instanceID: 3346}
     - Class: 114
-      Script: {instanceID: 3456}
+      Script: {instanceID: 3458}
     - Class: 114
-      Script: {instanceID: 3472}
+      Script: {instanceID: 3474}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -234,19 +229,19 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1498}
+      Script: {instanceID: 1500}
     - Class: 114
       Script: {instanceID: 1786}
     - Class: 114
-      Script: {instanceID: 2160}
+      Script: {instanceID: 2162}
     - Class: 114
-      Script: {instanceID: 2208}
+      Script: {instanceID: 2210}
     - Class: 114
-      Script: {instanceID: 2266}
+      Script: {instanceID: 2268}
     - Class: 114
-      Script: {instanceID: 2542}
+      Script: {instanceID: 2544}
     - Class: 114
-      Script: {instanceID: 2552}
+      Script: {instanceID: 2554}
     - Class: 114
       Script: {instanceID: 2702}
     - Class: 114
@@ -256,19 +251,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3098}
     - Class: 114
-      Script: {instanceID: 3242}
+      Script: {instanceID: 3244}
     - Class: 114
-      Script: {instanceID: 3344}
+      Script: {instanceID: 3346}
     - Class: 114
-      Script: {instanceID: 3456}
+      Script: {instanceID: 3458}
     - Class: 114
-      Script: {instanceID: 4902}
+      Script: {instanceID: 5116}
     - Class: 114
-      Script: {instanceID: 5128}
+      Script: {instanceID: 5206}
     - Class: 114
-      Script: {instanceID: 5218}
-    - Class: 114
-      Script: {instanceID: 5514}
+      Script: {instanceID: 5504}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -305,9 +298,9 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1498}
+      Script: {instanceID: 1500}
     - Class: 114
-      Script: {instanceID: 2266}
+      Script: {instanceID: 2268}
     - Class: 114
       Script: {instanceID: 2702}
     - Class: 114
@@ -317,11 +310,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3098}
     - Class: 114
-      Script: {instanceID: 3344}
+      Script: {instanceID: 3182}
     - Class: 114
-      Script: {instanceID: 3456}
+      Script: {instanceID: 3346}
     - Class: 114
-      Script: {instanceID: 4234}
+      Script: {instanceID: 3458}
+    - Class: 114
+      Script: {instanceID: 4232}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -358,15 +353,15 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1498}
+      Script: {instanceID: 1500}
     - Class: 114
       Script: {instanceID: 1740}
     - Class: 114
-      Script: {instanceID: 1866}
+      Script: {instanceID: 1868}
     - Class: 114
-      Script: {instanceID: 2266}
+      Script: {instanceID: 2268}
     - Class: 114
-      Script: {instanceID: 2490}
+      Script: {instanceID: 2494}
     - Class: 114
       Script: {instanceID: 2702}
     - Class: 114
@@ -382,9 +377,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3098}
     - Class: 114
-      Script: {instanceID: 3344}
+      Script: {instanceID: 3346}
     - Class: 114
-      Script: {instanceID: 3456}
+      Script: {instanceID: 3458}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -438,12 +433,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalAsset
-  - hash:
-      serializedVersion: 2
-      Hash: d1b036fbe5adcfe372c77a9d812c7e37
-    assemblyName: Unity.2D.IK.Runtime.dll
-    namespaceName: UnityEditor.U2D.IK
-    className: IKEditorManagerHelper
   - hash:
       serializedVersion: 2
       Hash: bcaee4c2a83047257b5f47d6ed264b75
@@ -542,7 +531,7 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
-      Hash: f1d735cc1a21c3704ab52568f4fbfcf8
+      Hash: 91d258529db2b5060a913f2afcea1a21
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
     className: PlaymodeTestsController
@@ -578,12 +567,6 @@ ScriptsOnlyBuild:
     className: cshDontDestroyObject
   - hash:
       serializedVersion: 2
-      Hash: 0f0862fab3cc6848df242614d903c2e5
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayMovement2
-  - hash:
-      serializedVersion: 2
       Hash: cfdd0010efd7b54c2b7512656dbc9119
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
@@ -606,12 +589,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SensorBugTest
-  - hash:
-      serializedVersion: 2
-      Hash: 06dd08d424568a66d25e4900fecbaa62
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameEnding
   - hash:
       serializedVersion: 2
       Hash: a1aa98c78061c6f03a8c124cda576e67
@@ -714,6 +691,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: LimbSolver2D
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: cshTMP
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -824,12 +807,6 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 886a1a895f8eb6f9ee0a439e1a0f74c4
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: LoginSuccess
-  - hash:
-      serializedVersion: 2
       Hash: 3164bc883ff663a5cdb32d1ef7e7c0c5
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -908,12 +885,6 @@ ScriptsOnlyBuild:
     className: cshStart
   - hash:
       serializedVersion: 2
-      Hash: 6c91f1ecc3b7e8a0497761886128e45a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: AndroidLib
-  - hash:
-      serializedVersion: 2
       Hash: 87cef3c82381dc586f6772c3e27561b6
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.Experimental.U2D.Animation
@@ -944,12 +915,6 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 035e22373c314c213b1fad4e8af14776
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: cshRandomTest
-  - hash:
-      serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -978,12 +943,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 9a62527cf96c99811bbc76fe09736c81
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: WaypointPatrol
   - hash:
       serializedVersion: 2
       Hash: 3165968ba45c74472d279ba04455fccb
@@ -1038,18 +997,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteSkinEntity
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: cshReady
-  - hash:
-      serializedVersion: 2
-      Hash: 01fae255d20da46d9cd1ddecd1677923
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Outliner
   - hash:
       serializedVersion: 2
       Hash: 28cfb4bd305dd11c6326cc3ee7c14138
@@ -1118,22 +1065,10 @@ ScriptsOnlyBuild:
     className: cshPipeSpawner
   - hash:
       serializedVersion: 2
-      Hash: 0f1977a7d51a5c5dee54d0932eea0adb
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Observer
-  - hash:
-      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalEmitter
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: EventManager
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1154,12 +1089,6 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 94d37e409f722f29b5d6b1af31f4907e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: LightFlicker
-  - hash:
-      serializedVersion: 2
       Hash: 762a30c8d779b11af16ed9ce1f2d32fa
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
@@ -1171,4 +1100,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/ble_test_scence1.unity
   - Assets/Scenes/StartScene.unity
   - Assets/Scenes/GameScene.unity
-  playerPath: E:/s/2DFlappyBird_ver0.0.5.apk
+  playerPath: E:/s/2DFlappyBird_ver0.0.6.apk
