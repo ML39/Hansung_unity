@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\GameScene\cshCoinSpawner.cs" />
     <Compile Include="Assets\Shatalmic\Example\iBeaconExample\iBeaconExampleScript.cs" />
     <Compile Include="Assets\Scripts\GameScene\cshPipeSpawner.cs" />
+    <Compile Include="Assets\Scripts\EventManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -14,36 +14,23 @@ public class cshGameManager : MonoBehaviour
     public GameObject NormalPipeSpawner;
     public GameObject HardPipeSpawner;
     public GameObject Bird;
-    public GameObject Ready;
 
     public int level;
-
-    private UnityAction GameStartListener;
-    private UnityAction GameOverListener;
 
     public float GameStartTime;
     public float GameOverTime;
     public float GameTime;
 
-    private void Awake()
-    {
-        GameStartListener = new UnityAction(GameStartEvent);
-        GameOverListener = new UnityAction(GameOverEvent);
-    }
-
-    private void OnEnable()
-    {
-        cshEventManager.StartListening(EVENT_TYPE.GAMESTART, GameStartListener);
-        cshEventManager.StartListening(EVENT_TYPE.GAMEOVER, GameOverListener);
-    }
-
     // Start is called before the first frame update
     void Start()
     {
+        cshEventManager.Instance.AddListener(EVENT_TYPE.LEVEL_SELECT, GameEvent);
+        cshEventManager.Instance.AddListener(EVENT_TYPE.GAME_START, GameEvent);
+        cshEventManager.Instance.AddListener(EVENT_TYPE.GAME_OVER, GameEvent);
+        cshEventManager.Instance.AddListener(EVENT_TYPE.GAME_RESULT, GameEvent);
+
         level = cshStart.level;
         Bird.GetComponent<Animator>().SetInteger("Level", level);
-        Time.timeScale = 1;
-
         switch (level)
         {
             case 1:
@@ -58,8 +45,7 @@ public class cshGameManager : MonoBehaviour
             default:
                 break;
         }
-
-        cshEventManager.TriggerEvent(EVENT_TYPE.GAMESTART);
+        Time.timeScale = 1;
 
         if (cshTMP.blechecktmp == true)
         {
@@ -71,6 +57,9 @@ public class cshGameManager : MonoBehaviour
             Bird.GetComponent<cshBird_ble>().enabled = false;
             Bird.GetComponent<cshBird>().enabled = true;
         }
+
+        cshEventManager.Instance.PostNotification(EVENT_TYPE.GAME_START, this);
+        cshEventManager.Instance.PostNotification(EVENT_TYPE.LEVEL_SELECT, this);
     }
 
     // Update is called once per frame
@@ -79,21 +68,39 @@ public class cshGameManager : MonoBehaviour
 
     }
 
-    public void GameStartEvent()
+    public void GameEvent(EVENT_TYPE Event_Type, Component Sender, object Param = null)
     {
-        GameStartTime = Time.time;
-        Debug.Log("StartGame" + ", Time : " + DateTime.Now);
+        if (Event_Type == EVENT_TYPE.GAME_START)
+        {
+            GameStartTime = Time.time;
+            Debug.Log("StartGame" + ", Time : " + DateTime.Now);
+        }
+        else if (Event_Type == EVENT_TYPE.GAME_OVER)
+        {
+            GameOverTime = Time.time;
+            Time.timeScale = 0;
+            cshEventManager.Instance.PostNotification(EVENT_TYPE.GAME_RESULT, this);
+        }
+        else if (Event_Type == EVENT_TYPE.LEVEL_SELECT)
+        {
+            
+        }
+        else if (Event_Type == EVENT_TYPE.GAME_RESULT)
+        {
+            GameTime = GameOverTime - GameStartTime;
+            cshEventManager.GameTime = (int)GameTime;
+            cshEventManager.GameScore = cshScore.score;
+            cshEventManager.GameDateTime = DateTime.Now.ToString("G");
+
+            Debug.Log("GameOver, Score:" + cshScore.score + ", Time : " + DateTime.Now);
+
+            cshEventManager.check = true;
+        }
     }
 
-    public void GameOverEvent() 
+    public void LevelSelect() 
     {
-        GameOverTime = Time.time;
-        GameTime = GameOverTime - GameStartTime;
-        cshEventManager.GameTime = (int)GameTime;
-        cshEventManager.GameScore = cshScore.score;
-        cshEventManager.GameDateTime = DateTime.Now.ToString("G");
-
-        Debug.Log("GameOver, Score:"+ cshScore.score + ", Time : " + DateTime.Now);
+        
     }
 
     public void Pause()
@@ -107,13 +114,13 @@ public class cshGameManager : MonoBehaviour
         PauseCanvas.SetActive(false);
         Time.timeScale = 1;
     }
+
     public void GameOver()
     {
-        cshEventManager.TriggerEvent(EVENT_TYPE.GAMEOVER);
+        cshEventManager.Instance.PostNotification(EVENT_TYPE.GAME_OVER, this);
         gameOverCanvas.SetActive(true);
         Time.timeScale = 0;
     }
-
 
     public void Replay()
     {
@@ -122,7 +129,7 @@ public class cshGameManager : MonoBehaviour
 
     public void Menu()
     {
-        cshEventManager.TriggerEvent(EVENT_TYPE.GAMEOVER);
+        cshEventManager.Instance.PostNotification(EVENT_TYPE.GAME_OVER, this);
         Time.timeScale = 1;
         SceneManager.LoadScene("StartScene");
     }

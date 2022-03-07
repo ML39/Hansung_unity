@@ -37,18 +37,6 @@ public class Cognito : MonoBehaviour
     // static Amazon.RegionEndpoint Region = Amazon.RegionEndpoint.APNortheast2; //insert region user pool was created in, if it is different than US EAST 1
     bool signInSuccessful;
 
-    private UnityAction LogINListener;
-
-    private void Awake()
-    {
-        LogINListener = new UnityAction(LogINEvent);
-    }
-
-    private void OnEnable()
-    {
-        cshEventManager.StartListening(EVENT_TYPE.LOGINSUCCESS, LogINListener);
-    }
-
     void Start()
     {
         SignupButton.onClick.AddListener(on_signup_click);
@@ -57,7 +45,9 @@ public class Cognito : MonoBehaviour
         
         signInSuccessful = false;
         Debug.Log("Cognito auth begin");
-        StatusText.text = "Cognito Auth"; 
+        StatusText.text = "Cognito Auth";
+
+        cshEventManager.Instance.AddListener(EVENT_TYPE.LOGIN_SUCCESS, LogINEvent);
     }
 
     // Update is called once per frame
@@ -65,7 +55,7 @@ public class Cognito : MonoBehaviour
     {
         if (signInSuccessful)
         {
-            cshEventManager.TriggerEvent(EVENT_TYPE.LOGINSUCCESS);
+            cshEventManager.Instance.PostNotification(EVENT_TYPE.LOGIN_SUCCESS, this, signInSuccessful);
             animator.SetBool("activity", false);
            // SceneManager.LoadScene(1);
             SceneManager.LoadScene("ble_test_scence1");
@@ -173,7 +163,7 @@ public class Cognito : MonoBehaviour
         }
     }
 
-    public void LogINEvent()
+    public void LogINEvent(EVENT_TYPE Event_Type, Component Sender, object Param = null)
     {
         cshEventManager.Email = UsernameField.text;
         Debug.Log("LogIN" + ", Time : " + DateTime.Now);

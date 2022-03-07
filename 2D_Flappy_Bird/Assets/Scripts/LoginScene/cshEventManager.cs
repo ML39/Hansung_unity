@@ -8,9 +8,14 @@ using System.Text;
 
 public enum EVENT_TYPE
 {
-    LOGINSUCCESS,
-    GAMESTART,
-    GAMEOVER,
+    LOGIN_SUCCESS,
+    LEVEL_SELECT,
+    GAME_START,
+    CHECK_INHALE_SPD,
+    CHECK_EXHALE_SPD,
+    SCORE_CHANGE,
+    GAME_RESULT,
+    GAME_OVER,
 };
 
 
@@ -38,7 +43,7 @@ public class cshEventManager : MonoBehaviour
         public string PK = "PLAYER";
     }
 
-    private static bool check = false;
+    public static bool check = false;
 
     public class Users
     {
@@ -54,8 +59,7 @@ public class cshEventManager : MonoBehaviour
     // DELEGATE FOR EVENT
     public delegate void OnEvent(EVENT_TYPE Event_Type, Component Sender, object Param = null);
 
-    
-    private Dictionary<EVENT_TYPE, UnityEvent> eventDictionary = new Dictionary<EVENT_TYPE, UnityEvent>();
+    private static Dictionary<EVENT_TYPE, List<OnEvent>> Listeners = new Dictionary<EVENT_TYPE, List<OnEvent>>();
 
     private void Awake()
     {
@@ -77,6 +81,52 @@ public class cshEventManager : MonoBehaviour
         Users user_arr = new Users();
     }
 
+    public void AddListener(EVENT_TYPE Event_Type, OnEvent Listener)
+    {
+        // 이 이벤트를 수신할 리스너의 리스트
+        List<OnEvent> ListenList = null;
+
+        // 이벤트 형식 키가 존재하는지 검사한다. 존재하면 이를 리스트에 추가한다.
+        if (Listeners.TryGetValue(Event_Type, out ListenList))
+        {
+            // 리스트가 존재하면 새 항목을 추가한다.
+            ListenList.Add(Listener);
+            Debug.Log(Event_Type);
+            return;
+        }
+
+        // 아니면 새로운 리스트를 생성한다.
+        ListenList = new List<OnEvent>();
+        ListenList.Add(Listener);
+        Listeners.Add(Event_Type, ListenList); // 내부의 Listner list에 추가한다.
+    }
+
+    public void PostNotification(EVENT_TYPE Event_Type, Component Sender, object Param = null)
+    {
+        // Notifiy all listeners of an event
+
+        // List of listeners for this event only
+        List<OnEvent> ListenList = null;
+
+        // If no event entry exists, then exit because there are no listeners
+        if (!Listeners.TryGetValue(Event_Type, out ListenList))
+        {
+            return;
+        }
+
+        // Event entry exists. Now notify appropriate listeners send message via delegate
+        for (int i = 0; i < ListenList.Count; i++)
+        {
+            // If object is not null, then 
+            if (!ListenList[i].Equals(null))
+            {
+                ListenList[i](Event_Type, Sender, Param);
+            }
+        }
+    }
+
+    /*
+
     public static void StartListening(EVENT_TYPE event_type, UnityAction listener)
     {
         UnityEvent thisEvent = null;
@@ -91,6 +141,7 @@ public class cshEventManager : MonoBehaviour
             instance.eventDictionary.Add(event_type, thisEvent);
         }
     }
+
     public static void StopListening(EVENT_TYPE event_type, UnityAction listener)
     {
         if (instance == null) return;
@@ -113,6 +164,7 @@ public class cshEventManager : MonoBehaviour
             check = true;
         }
     }
+    */
 
     private void Update()
     {
