@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\LoginScene\Cognito.cs" />
     <Compile Include="Assets\Shatalmic\Example\StartingExample\StartingExample.cs" />
     <Compile Include="Assets\Scripts\GameScene\cshPipeMove.cs" />
+    <Compile Include="Assets\Scripts\EventManager.cs" />
     <Compile Include="Assets\Scripts\GameScene\cshAddScore.cs" />
     <Compile Include="Assets\Scripts\GameScene\cshBird_ble.cs" />
     <Compile Include="Assets\Shatalmic\Example\MultipleLevels\FoundDeviceListScript.cs" />
@@ -78,16 +79,18 @@
     <Compile Include="Assets\Scripts\BleScene\cshButtonManager.cs" />
     <Compile Include="Assets\Shatalmic\Example\MultipleLevels\Level2Script.cs" />
     <Compile Include="Assets\Shatalmic\Example\ArduinoHM10Test\ArduinoHM10Test.cs" />
+    <Compile Include="Assets\Scripts\LoginScene\cshUserInfo.cs" />
     <Compile Include="Assets\Scripts\LoginScene\cshEventManager.cs" />
     <Compile Include="Assets\Scripts\GameStartScene\cshStart.cs" />
     <Compile Include="Assets\Shatalmic\Example\ScannerTest\ScannedItemScript.cs" />
     <Compile Include="Assets\Shatalmic\Example\MultipleLevels\Level1Script.cs" />
+    <Compile Include="Assets\Scripts\SurveyScene\cshSurveyButton.cs" />
     <Compile Include="Assets\Shatalmic\Example\iBeaconExample\iBeaconItemScript.cs" />
     <Compile Include="Assets\Scripts\GameScene\cshGameManager.cs" />
     <Compile Include="Assets\Scripts\GameScene\cshCoinSpawner.cs" />
     <Compile Include="Assets\Shatalmic\Example\iBeaconExample\iBeaconExampleScript.cs" />
     <Compile Include="Assets\Scripts\GameScene\cshPipeSpawner.cs" />
-    <Compile Include="Assets\Scripts\EventManager.cs" />
+    <Compile Include="Assets\Scripts\GameScene\cshMinusScore.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

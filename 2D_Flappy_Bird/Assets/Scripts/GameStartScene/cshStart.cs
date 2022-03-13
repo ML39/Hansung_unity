@@ -25,14 +25,14 @@ public class cshStart : MonoBehaviour
 
     public void EasyGame()
     {
-        level = 1;
+        level = 0;
     }
     public void NormalGame()
     {
-        level = 2;
+        level = 1;
     }
     public void HardGame()
     {
-        level = 3;
+        level = 2;
     }
 }

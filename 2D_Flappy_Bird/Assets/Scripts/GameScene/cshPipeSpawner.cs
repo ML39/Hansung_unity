@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class cshPipeSpawner : MonoBehaviour
 {
-    public float maxTime = 5;
+    public float maxTime = 6;
     private float timer = 0;
     public GameObject pipe;
     public float height;
@@ -22,7 +22,7 @@ public class cshPipeSpawner : MonoBehaviour
         {
             GameObject newpipe = Instantiate(pipe);
             newpipe.transform.position = transform.position + new Vector3(0, Random.Range(-height, height), 0);
-            Destroy(newpipe, 15);
+            Destroy(newpipe, 20);
             timer = 0;
         }
 

@@ -44,8 +44,10 @@ public class StartingExample : MonoBehaviour
     public Text StatusText;
     public Text ButtonPositionText;
 
-    public float exhale;
-    public float inhale;
+    public int exhaleCnt;
+    public int inhaleCnt;
+    public float exhaleSpd;
+    public float inhaleSpd;
 
     private string StatusMessage
     {
@@ -112,8 +114,10 @@ public class StartingExample : MonoBehaviour
                                      exhaleCountString, inhaleCountSring,exhaleSpeedString,inhaleSpeedString);
         ButtonPositionText.text = str;
 
-        exhale = exhaleSpeed;
-        inhale = inhaleSpeed;
+        exhaleCnt = int.Parse(exhaleCountString);
+        inhaleCnt = int.Parse(inhaleCountSring);
+        exhaleSpd = float.Parse(exhaleSpeedString);
+        inhaleSpd = float.Parse(inhaleSpeedString);
     }
 
     // Update is called once per frame

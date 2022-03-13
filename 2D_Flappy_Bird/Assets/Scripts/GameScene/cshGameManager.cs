@@ -14,12 +14,19 @@ public class cshGameManager : MonoBehaviour
     public GameObject NormalPipeSpawner;
     public GameObject HardPipeSpawner;
     public GameObject Bird;
+    public GameObject ScoreAnimation;
 
     public int level;
 
     public float GameStartTime;
     public float GameOverTime;
     public float GameTime;
+
+    public float maxTime = 5;
+    private float timer = 0;
+    public int count = 0;
+
+    public static bool Check = false;
 
     // Start is called before the first frame update
     void Start()
@@ -30,16 +37,17 @@ public class cshGameManager : MonoBehaviour
         cshEventManager.Instance.AddListener(EVENT_TYPE.GAME_RESULT, GameEvent);
 
         level = cshStart.level;
+        cshUserInfo.GameLevel = level;
         Bird.GetComponent<Animator>().SetInteger("Level", level);
         switch (level)
         {
-            case 1:
+            case 0:
                 Easy();
                 break;
-            case 2:
+            case 1:
                 Normal();
                 break;
-            case 3:
+            case 2:
                 Hard();
                 break;
             default:
@@ -47,6 +55,7 @@ public class cshGameManager : MonoBehaviour
         }
         Time.timeScale = 1;
 
+        /*
         if (cshTMP.blechecktmp == true)
         {
             Bird.GetComponent<cshBird_ble>().enabled = true;
@@ -57,6 +66,7 @@ public class cshGameManager : MonoBehaviour
             Bird.GetComponent<cshBird_ble>().enabled = false;
             Bird.GetComponent<cshBird>().enabled = true;
         }
+        */
 
         cshEventManager.Instance.PostNotification(EVENT_TYPE.GAME_START, this);
         cshEventManager.Instance.PostNotification(EVENT_TYPE.LEVEL_SELECT, this);
@@ -65,7 +75,24 @@ public class cshGameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (timer > maxTime)
+        {
+            cshUserInfo.Breath ListTmp = new cshUserInfo.Breath
+            {
+                cnt = count,
+                exhaleCntInfo = GameObject.Find("bleManager").GetComponent<StartingExample>().exhaleCnt,
+                inhaleCntInfo = GameObject.Find("bleManager").GetComponent<StartingExample>().inhaleCnt,
+                exhaleSpdInfo = GameObject.Find("bleManager").GetComponent<StartingExample>().exhaleSpd,
+                inhaleSpdInfo = GameObject.Find("bleManager").GetComponent<StartingExample>().inhaleSpd
+            };
 
+            cshUserInfo.BreathList.Add(ListTmp);
+            count += 1;
+            timer = 0;
+        }
+        timer += Time.deltaTime;
+
+        ScoreAnimation.SetActive(Check);
     }
 
     public void GameEvent(EVENT_TYPE Event_Type, Component Sender, object Param = null)
@@ -73,6 +100,7 @@ public class cshGameManager : MonoBehaviour
         if (Event_Type == EVENT_TYPE.GAME_START)
         {
             GameStartTime = Time.time;
+            cshUserInfo.GameStartTime = DateTime.Now.ToString("G");
             Debug.Log("StartGame" + ", Time : " + DateTime.Now);
         }
         else if (Event_Type == EVENT_TYPE.GAME_OVER)
@@ -88,13 +116,11 @@ public class cshGameManager : MonoBehaviour
         else if (Event_Type == EVENT_TYPE.GAME_RESULT)
         {
             GameTime = GameOverTime - GameStartTime;
-            cshEventManager.GameTime = (int)GameTime;
-            cshEventManager.GameScore = cshScore.score;
-            cshEventManager.GameDateTime = DateTime.Now.ToString("G");
+            cshUserInfo.GameOverTime = DateTime.Now.ToString("G");
+            cshUserInfo.GameTime = (int)GameTime;
+            cshUserInfo.GameScore = cshScore.score;
 
             Debug.Log("GameOver, Score:" + cshScore.score + ", Time : " + DateTime.Now);
-
-            cshEventManager.check = true;
         }
     }
 
@@ -115,12 +141,14 @@ public class cshGameManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    /*
     public void GameOver()
     {
         cshEventManager.Instance.PostNotification(EVENT_TYPE.GAME_OVER, this);
         gameOverCanvas.SetActive(true);
         Time.timeScale = 0;
     }
+    */
 
     public void Replay()
     {
@@ -131,14 +159,14 @@ public class cshGameManager : MonoBehaviour
     {
         cshEventManager.Instance.PostNotification(EVENT_TYPE.GAME_OVER, this);
         Time.timeScale = 1;
-        SceneManager.LoadScene("StartScene");
+        SceneManager.LoadScene("SurveyScene");
     }
 
     public void Easy()
     {
         CoinSpawner.SetActive(true);
-        GameObject.Find("Bird").GetComponent<cshBird>().super = true;
-        GameObject.Find("Bird").GetComponent<cshBird_ble>().super = true;
+        //GameObject.Find("Bird").GetComponent<cshBird>().super = true;
+        //GameObject.Find("Bird").GetComponent<cshBird_ble>().super = true;
     }
 
     public void Normal()

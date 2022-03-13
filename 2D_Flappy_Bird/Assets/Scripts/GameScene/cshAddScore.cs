@@ -8,7 +8,7 @@ public class cshAddScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cshEventManager.Instance.AddListener(EVENT_TYPE.SCORE_CHANGE, addScore);
+        cshEventManager.Instance.AddListener(EVENT_TYPE.SCORE_PLUS, ScorePlus);
     }
 
     // Update is called once per frame
@@ -19,14 +19,14 @@ public class cshAddScore : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        cshEventManager.Instance.PostNotification(EVENT_TYPE.SCORE_CHANGE, this, cshScore.score);
+        cshEventManager.Instance.PostNotification(EVENT_TYPE.SCORE_PLUS, this, cshScore.score);
         GameObject.Find("SoundManager").GetComponent<cshSound>().check = 1;
         GameObject effect = Instantiate(PointEffect, transform.position, Quaternion.identity);
         Destroy(effect, 0.4f);
         Destroy(gameObject);
     }
 
-    public void addScore(EVENT_TYPE Event_Type, Component Sender, object Param = null)
+    public void ScorePlus(EVENT_TYPE Event_Type, Component Sender, object Param = null)
     {
         int score = (int)Param;
         score += 1;

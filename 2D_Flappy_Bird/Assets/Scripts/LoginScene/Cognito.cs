@@ -56,6 +56,7 @@ public class Cognito : MonoBehaviour
         if (signInSuccessful)
         {
             cshEventManager.Instance.PostNotification(EVENT_TYPE.LOGIN_SUCCESS, this, signInSuccessful);
+            cshUserInfo.LogINTime = DateTime.Now.ToString("G");
             animator.SetBool("activity", false);
            // SceneManager.LoadScene(1);
             SceneManager.LoadScene("ble_test_scence1");
@@ -165,7 +166,7 @@ public class Cognito : MonoBehaviour
 
     public void LogINEvent(EVENT_TYPE Event_Type, Component Sender, object Param = null)
     {
-        cshEventManager.Email = UsernameField.text;
+        cshUserInfo.Email = UsernameField.text;
         Debug.Log("LogIN" + ", Time : " + DateTime.Now);
     }
 }

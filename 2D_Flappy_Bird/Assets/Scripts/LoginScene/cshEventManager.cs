@@ -13,7 +13,8 @@ public enum EVENT_TYPE
     GAME_START,
     CHECK_INHALE_SPD,
     CHECK_EXHALE_SPD,
-    SCORE_CHANGE,
+    SCORE_PLUS,
+    SCORE_MINUS,
     GAME_RESULT,
     GAME_OVER,
 };
@@ -21,35 +22,6 @@ public enum EVENT_TYPE
 
 public class cshEventManager : MonoBehaviour
 {
-    public static string Email;
-    public static int GameScore;
-    public static int GameTime;
-    public static string GameDateTime;
-
-    [System.Serializable]
-    public class UserInfo
-    {
-        public string EmailInfo;
-        public int GameScoreInfo;
-        public int GameTimeInfo;
-        public string GameDateTimeInfo;
-    }
-
-    public class UserPost
-    {
-        public string SK = "playerName#LJMo_-#date#2022-02-11T06:27:34.499Z";
-        public string playerID = "ljm9802mo@naver.com";
-        public List<UserInfo> playerInfo;
-        public string PK = "PLAYER";
-    }
-
-    public static bool check = false;
-
-    public class Users
-    {
-        public List<UserInfo> users = new List<UserInfo>();
-    }
-
     private static cshEventManager instance = null;
     public static cshEventManager Instance
     {
@@ -78,7 +50,7 @@ public class cshEventManager : MonoBehaviour
 
     private void Start()
     {
-        Users user_arr = new Users();
+
     }
 
     public void AddListener(EVENT_TYPE Event_Type, OnEvent Listener)
@@ -168,86 +140,7 @@ public class cshEventManager : MonoBehaviour
 
     private void Update()
     {
-        if (check)
-        {
-            MakeUserInfo();
-        }
+
     }
 
-    public void MakeUserInfo() 
-    {
-        UserInfo user_tmp = new UserInfo
-        {
-            EmailInfo = Email,
-            GameScoreInfo = GameScore,
-            GameTimeInfo = GameTime,
-            GameDateTimeInfo = GameDateTime
-        };
-
-        List<UserInfo> user_list = new List<UserInfo>();
-        user_list.Add(user_tmp);
-
-        UserPost user = new UserPost 
-        {
-            playerInfo = user_list
-        };
-
-        string json = JsonUtility.ToJson(user);
-        Debug.Log(json);
-
-        StartCoroutine(Upload(
-            "https://kv2s3duleh.execute-api.ap-northeast-2.amazonaws.com/default/lungrow-minecraft-create-data"
-            , json));
-        StartCoroutine(GetRequest("https://aeptktnm55.execute-api.ap-northeast-2.amazonaws.com/default/lungrow-minecraft-getInfo-ByPlayerName?playerName=LJMo_-"));
-
-        check = false;
-    }
-
-    IEnumerator Upload(string URL, string json)
-    {
-        var request = new UnityWebRequest(URL, "POST");
-        byte[] bodyRaw = Encoding.UTF8.GetBytes(json);
-        request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
-        request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
-        request.SetRequestHeader("Content-Type", "application/json");
-
-        yield return request.SendWebRequest();
-
-        if (request.isNetworkError || request.isHttpError)
-        {
-            Debug.Log(request.error);
-        }
-        else
-        {
-            Debug.Log(request.downloadHandler.text);
-        }
-    }
-
-    IEnumerator GetRequest(string url)
-    {
-        using (UnityWebRequest request = UnityWebRequest.Get(url))
-        {
-            yield return request.SendWebRequest();
-
-            if (request.isNetworkError || request.isHttpError)
-            {
-                Debug.Log(request.error);
-            }
-            else
-            {
-                Debug.Log(request.downloadHandler.text);
-            }
-        }
-    }
-
-    IEnumerator Post(string url, string bodyJsonString)
-    {
-        var request = new UnityWebRequest(url, "POST");
-        byte[] bodyRaw = Encoding.UTF8.GetBytes(bodyJsonString);
-        request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
-        request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
-        request.SetRequestHeader("Content-Type", "application/json");
-        yield return request.SendWebRequest();
-        Debug.Log("Status Code: " + request.responseCode);
-    }
 }

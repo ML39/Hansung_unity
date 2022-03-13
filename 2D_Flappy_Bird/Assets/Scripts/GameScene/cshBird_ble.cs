@@ -5,9 +5,9 @@ using UnityEngine;
 public class cshBird_ble : MonoBehaviour
 {
     public cshGameManager gameManager;
-    public float velocity = 0.3f;
+    public float speed;
     private Rigidbody2D rb;
-    public bool super;
+    //public bool super;
 
     public float exhale;
     public float inhale;
@@ -15,7 +15,7 @@ public class cshBird_ble : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        super = false;
+        //super = false;
         rb = GetComponent<Rigidbody2D>();
 
         cshEventManager.Instance.AddListener(EVENT_TYPE.CHECK_EXHALE_SPD, checkSPD);
@@ -25,47 +25,50 @@ public class cshBird_ble : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        exhale = GameObject.Find("bleManager").GetComponent<StartingExample>().exhale;
-        inhale = GameObject.Find("bleManager").GetComponent<StartingExample>().inhale;
-        exhale = 1.5f;
-        if (exhale >= 0.3f)
+        exhale = GameObject.Find("bleManager").GetComponent<StartingExample>().exhaleSpd;
+        inhale = GameObject.Find("bleManager").GetComponent<StartingExample>().inhaleSpd;
+
+        if (exhale >= 0.5f && exhale >= inhale)
         {
-            rb.velocity = Vector2.up * velocity;
-            if (exhale >= 1.0f)
-            {
-                cshEventManager.Instance.PostNotification(EVENT_TYPE.CHECK_EXHALE_SPD, this, exhale);
-            }
+            speed = 1.0f;
         }
-        else if (inhale >= 0.3f)
+        else if (inhale >= 0.5f && exhale < inhale)
         {
-            rb.velocity = Vector2.down * velocity;
-            if (inhale >= 1.0f)
-            {
-                cshEventManager.Instance.PostNotification(EVENT_TYPE.CHECK_INHALE_SPD, this, inhale);
-            }
+            speed = -1.0f;
         }
         else
         {
-            rb.velocity = Vector2.up * 0.12f;
+            speed = 0.0f;
         }
+
+        if (exhale >= inhale)
+            cshEventManager.Instance.PostNotification(EVENT_TYPE.CHECK_EXHALE_SPD, this, exhale);
+        else if (exhale < inhale)
+            cshEventManager.Instance.PostNotification(EVENT_TYPE.CHECK_INHALE_SPD, this, inhale);
+        rb.velocity = new Vector2(0, speed);
     }
 
+    /*
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (super)
             return;
-        cshEventManager.Instance.PostNotification(EVENT_TYPE.GAME_OVER, gameManager);
+        //cshEventManager.Instance.PostNotification(EVENT_TYPE.GAME_OVER, gameManager);
     }
+    */
 
     public void checkSPD(EVENT_TYPE Event_Type, Component Sender, object Param = null) 
     {
-        if (Event_Type == EVENT_TYPE.CHECK_EXHALE_SPD)
+        if (Event_Type == EVENT_TYPE.CHECK_EXHALE_SPD || Event_Type == EVENT_TYPE.CHECK_INHALE_SPD)
         {
-            Debug.Log((float)Param);
-        }
-        else if (Event_Type == EVENT_TYPE.CHECK_INHALE_SPD)
-        {
-            Debug.Log((float)Param);
+            if ((float)Param >= 1.0f)
+            {
+                cshGameManager.Check = true;
+            }
+            else if ((float)Param < 1.0f)
+            {
+                cshGameManager.Check = false;
+            }
         }
     }
 }
