@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9177865709778902391}
-  - component: {fileID: 9177865709778902408}
+  - component: {fileID: 209180294698541304}
   m_Layer: 0
   m_Name: NormalPipe
   m_TagString: Untagged
@@ -34,7 +34,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9177865709778902408
+--- !u!114 &209180294698541304
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,10 +43,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 9177865709778902390}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4c59f82a14d2de4789f3b40d2257ca6, type: 3}
+  m_Script: {fileID: 11500000, guid: 42b59e873df35894485e26e369a5c5c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.3
 --- !u!1 &9177865709797461683
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6eaaa5eed7afaf4aae25d89d6a25bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DamageEffect: {fileID: 2562398023873628283, guid: adf4b12990b20a545be5238bbe99c85b, type: 3}
 --- !u!1 &9177865710779030154
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,6 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6eaaa5eed7afaf4aae25d89d6a25bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DamageEffect: {fileID: 2562398023873628283, guid: adf4b12990b20a545be5238bbe99c85b, type: 3}
 --- !u!1001 &3446496097092972620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -358,7 +359,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1277704108471948, guid: a75df043a680d524f8f46a98c9c82bfc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a75df043a680d524f8f46a98c9c82bfc, type: 3}
 --- !u!4 &1398687719547159662 stripped
 Transform:

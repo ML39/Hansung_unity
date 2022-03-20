@@ -26,4 +26,9 @@ public class cshScene2Scene : MonoBehaviour
     {
         SceneManager.LoadScene("ble_test_scence1");
     }
+
+    public void Preferences()
+    {
+        SceneManager.LoadScene("PreferencesScene");
+    }
 }

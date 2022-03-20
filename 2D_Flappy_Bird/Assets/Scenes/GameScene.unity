@@ -359,7 +359,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_Sprite: {fileID: -8998104236824694837, guid: 352e105492434a24aa680ea557afc676, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -665,9 +665,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e489f845a2abe3a4eaece5d345119738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTime: 4
   coin: {fileID: 4370961693392770452, guid: a75df043a680d524f8f46a98c9c82bfc, type: 3}
   height: 0.55
+  i: 0
 --- !u!4 &428775855
 Transform:
   m_ObjectHideFlags: 0
@@ -785,7 +785,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_Sprite: {fileID: -8998104236824694837, guid: 352e105492434a24aa680ea557afc676, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1031,12 +1031,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 713291415}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d31d6fd06282c674eaf8594705888b57, type: 3}
+  m_Script: {fileID: 11500000, guid: 472fe8b09400f074aa6e6ede7e71938f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTime: 4
   pipe: {fileID: 9177865709778902390, guid: e1f0dfb6513fc9c4fa510c88d358a93d, type: 3}
-  height: 0.55
+  height: 0
+  i: 0
 --- !u!1 &715241679
 GameObject:
   m_ObjectHideFlags: 0
@@ -1447,7 +1447,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1368554185}
-  speed: 1
   exhale: 0
   inhale: 0
 --- !u!1 &1167898522
@@ -1650,12 +1649,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1348794394}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d31d6fd06282c674eaf8594705888b57, type: 3}
+  m_Script: {fileID: 11500000, guid: a675c48190560a54ea70dbe4c350d745, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTime: 4
   pipe: {fileID: 5728053771696523569, guid: d0b5d90afd646fd4bb3d948779fef44e, type: 3}
-  height: 0.6
+  height: 0
+  i: 0
 --- !u!4 &1348794396
 Transform:
   m_ObjectHideFlags: 0

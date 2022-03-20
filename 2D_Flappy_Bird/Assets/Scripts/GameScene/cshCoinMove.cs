@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class cshCoinMove : MonoBehaviour
 {
-    public float speed;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +13,6 @@ public class cshCoinMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.left * speed * Time.deltaTime;
+        transform.position += Vector3.left * cshValueSetting.EASYspeed * Time.deltaTime;
     }
 }

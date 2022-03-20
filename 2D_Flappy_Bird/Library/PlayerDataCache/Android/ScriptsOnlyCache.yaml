@@ -14,9 +14,12 @@ ScriptsOnlyBuild:
     - cshDontDestroyObject
     - cshEventManager
     - cshGameManager
+    - cshHardPipeMove
+    - cshHardPipeSpawner
     - cshMinusScore
-    - cshPipeMove
-    - cshPipeSpawner
+    - cshNormalPipeMove
+    - cshNormalPipeSpawner
+    - cshPreferences
     - cshScene2Scene
     - cshScore
     - cshSound
@@ -102,7 +105,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1590}
     - Class: 114
-      Script: {instanceID: 1874}
+      Script: {instanceID: 1872}
     - Class: 114
       Script: {instanceID: 2266}
     - Class: 114
@@ -116,15 +119,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3350}
     - Class: 114
-      Script: {instanceID: 3462}
+      Script: {instanceID: 3466}
     - Class: 114
-      Script: {instanceID: 4098}
+      Script: {instanceID: 4106}
     - Class: 114
-      Script: {instanceID: 4228}
+      Script: {instanceID: 4236}
     - Class: 114
-      Script: {instanceID: 4810}
+      Script: {instanceID: 4818}
     - Class: 114
-      Script: {instanceID: 5196}
+      Script: {instanceID: 5204}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -185,9 +188,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3350}
     - Class: 114
-      Script: {instanceID: 3462}
+      Script: {instanceID: 3466}
     - Class: 114
-      Script: {instanceID: 3478}
+      Script: {instanceID: 3482}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -244,7 +247,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1502}
     - Class: 114
-      Script: {instanceID: 1790}
+      Script: {instanceID: 1788}
+    - Class: 114
+      Script: {instanceID: 1922}
     - Class: 114
       Script: {instanceID: 2168}
     - Class: 114
@@ -266,15 +271,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3350}
     - Class: 114
-      Script: {instanceID: 3462}
+      Script: {instanceID: 3360}
     - Class: 114
-      Script: {instanceID: 5124}
+      Script: {instanceID: 3466}
     - Class: 114
-      Script: {instanceID: 5214}
+      Script: {instanceID: 3538}
     - Class: 114
-      Script: {instanceID: 5512}
+      Script: {instanceID: 5132}
     - Class: 114
-      Script: {instanceID: 23930}
+      Script: {instanceID: 5222}
+    - Class: 114
+      Script: {instanceID: 20528}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -284,6 +291,57 @@ ScriptsOnlyBuild:
     - Class: 196
       Script: {instanceID: 0}
     - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/PreferencesScene.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1500}
+    - Class: 114
+      Script: {instanceID: 1502}
+    - Class: 114
+      Script: {instanceID: 2706}
+    - Class: 114
+      Script: {instanceID: 2868}
+    - Class: 114
+      Script: {instanceID: 3102}
+    - Class: 114
+      Script: {instanceID: 3160}
+    - Class: 114
+      Script: {instanceID: 3350}
+    - Class: 114
+      Script: {instanceID: 3382}
+    - Class: 114
+      Script: {instanceID: 3466}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -327,9 +385,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3350}
     - Class: 114
-      Script: {instanceID: 3462}
+      Script: {instanceID: 3466}
     - Class: 114
-      Script: {instanceID: 4238}
+      Script: {instanceID: 4246}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -380,9 +438,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3350}
     - Class: 114
-      Script: {instanceID: 3462}
+      Script: {instanceID: 3466}
     - Class: 114
-      Script: {instanceID: 4846}
+      Script: {instanceID: 4854}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -421,9 +479,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1502}
     - Class: 114
-      Script: {instanceID: 1744}
+      Script: {instanceID: 1742}
     - Class: 114
-      Script: {instanceID: 1874}
+      Script: {instanceID: 1872}
     - Class: 114
       Script: {instanceID: 2498}
     - Class: 114
@@ -443,7 +501,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3350}
     - Class: 114
-      Script: {instanceID: 3462}
+      Script: {instanceID: 3466}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -547,10 +605,10 @@ ScriptsOnlyBuild:
     className: HorizontalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: cshPipeMove
+    className: cshHardPipeMove
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -577,6 +635,12 @@ ScriptsOnlyBuild:
     className: BluetoothDeviceScript
   - hash:
       serializedVersion: 2
+      Hash: 2d0f6b94188d41fd37634268f4801330
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: cshHardPipeSpawner
+  - hash:
+      serializedVersion: 2
       Hash: e3180796bdc023b4861c31a01a103ef4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -589,7 +653,7 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
-      Hash: 6b85d06980ec0baa8e1b6dbc4d1141e3
+      Hash: 660e98751cbec76055b9b449db02e59e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: cshBird_ble
@@ -643,7 +707,7 @@ ScriptsOnlyBuild:
     className: IKManager2D
   - hash:
       serializedVersion: 2
-      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: cshCoinMove
@@ -787,6 +851,12 @@ ScriptsOnlyBuild:
     className: StandaloneInputModule
   - hash:
       serializedVersion: 2
+      Hash: 2703f7aacdcd499d1e43e468bd2f1cfb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: cshMinusScore
+  - hash:
+      serializedVersion: 2
       Hash: f7858108331b563fb41b80b729297acd
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -803,6 +873,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: MarkerTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 10fb4670ba64389cb65bf8f2839f663d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: cshPreferences
   - hash:
       serializedVersion: 2
       Hash: 8e6ceabfd38a184413d69b7db56c89cc
@@ -833,6 +909,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.SpriteShape.Runtime.dll
     namespaceName: UnityEngine.U2D
     className: SpriteShapeController
+  - hash:
+      serializedVersion: 2
+      Hash: 2d0f6b94188d41fd37634268f4801330
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: cshNormalPipeSpawner
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -893,6 +975,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: cshValueSetting
   - hash:
       serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
@@ -1117,7 +1205,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
-      Hash: 256d4d54f49f30eca7a2508fe9749b76
+      Hash: 20562dc35bb9e631a919bb9cbff855a5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: cshCoinSpawner
@@ -1139,12 +1227,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: BufferManager
-  - hash:
-      serializedVersion: 2
-      Hash: 1f4183c95e7a2fc843564b26527121a3
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: cshPipeSpawner
   - hash:
       serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
@@ -1180,7 +1262,7 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: cshMinusScore
+    className: cshNormalPipeMove
   platform: 13
   scenePathNames:
   - Assets/Scenes/CognitoTestScene.unity
@@ -1189,4 +1271,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/StartScene.unity
   - Assets/Scenes/GameScene.unity
   - Assets/Scenes/SurveyScene.unity
+  - Assets/Scenes/PreferencesScene.unity
   playerPath: E:/s/2DFlappyBird_ver0.0.7.apk
